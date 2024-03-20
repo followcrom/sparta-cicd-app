@@ -1,6 +1,6 @@
 # Sparta CI/CD App
 
-![alt text](imgs/cicd-pipeline2.jpg)
+![alt text](imgs/cicd-pipeline3.jpg)
 
 ## What is CI/CD?
 
@@ -27,16 +27,16 @@ CI/CD can be used in any software development project where you want to automate
 ## How to Use Jenkins
 
 1. Install Jenkins on your server (optional)
-2. Set up a Jenkins job
+2. Set up a Jenkins job. From the Jenkins dashboard, click on "New Item" to create a new job.
 3. Configure the job to build your project
-4. Configure the job to deploy your project
-5. Run the job
+4. To run the job, click on "Build Now" from the job page.
+5. From build history, you can see the status of the build and view the console output.
 
-![alt text](imgs/cicd-pipeline3.jpg)
+![alt text](imgs/cicd-pipeline2.jpg)
 
 ## Add SSH Key to Jenkins
 
-1. Generate an SSH key pair on your Jenkins server
+1. Generate an SSH key pair.
 2. Add the public key to your Git repository
 3. Add the private key to Jenkins
 4. Configure your Jenkins job to use the SSH key
@@ -53,3 +53,8 @@ Launching VS Code from an environment where your SSH agent is running ensures th
 ## SDLC
 
 
+cd app
+
+npm install
+
+npm test

@@ -4,10 +4,12 @@
 
 This app is intended for use with the Sparta Global Devops Stream as a sample app. You can clone the repo and use it as is but no changes will be accepted on this branch. 
 
-The app is a Node JS app with three pages.
+To use the repo within your course you should fork it.
+
+The app is a node app with three pages.
 
 ### Homepage
-- `192.168.10.100:3000`
+
 ``localhost:3000``
 
 Displays a simple homepage displaying a Sparta logo and message. This page should return a 200 response.
@@ -55,3 +57,7 @@ npm test
 ```
 
 The test for posts will fail ( as expected ) if the database has not been correctly setup.
+
+
+
+

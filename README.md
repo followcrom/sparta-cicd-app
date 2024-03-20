@@ -26,11 +26,19 @@ CI/CD can be used in any software development project where you want to automate
 
 ## How to Use Jenkins
 
-1. Install Jenkins on your server (optional)
-2. Set up a Jenkins job. From the Jenkins dashboard, click on "New Item" to create a new job.
-3. Configure the job to build your project
+1. Set up a Jenkins job. From the Jenkins dashboard, click on "New Item" to create a new job.
+2. Configure the job to build your project:
+- Discard old builds _m Max to keep 3
+- Add GitHub repository URL (https)
+- Source code management: Git _ repository URL (ssh)
+- Add private ssh key to Jenkins. it should match the public key in your GitHub repository
+- Build triggers: GitHub hook trigger for GITScm polling
+- Build environment: Provide Node & npm bin/ folder to PATH
+- Build: Execute shell _ cd app, npm install, npm test
+3. Save the job configuration.
 4. To run the job, click on "Build Now" from the job page.
 5. From build history, you can see the status of the build and view the console output.
+
 
 ![alt text](imgs/cicd-pipeline2.jpg)
 

@@ -1,11 +1,7 @@
-# sparta-cicd-app
+# Sparta CICD App
 
-## Introduction
+`code .`
 
-This is a simple app that is used to demonstrate the CI/CD pipeline.
+If you're not in the directory of your project, replace . with the path to your project directory.
 
-To set this up:
-
-Install the Remote - SSH extension from the VS Code marketplace.
-Use the Remote Explorer on the left side of VS Code or the command palette (Ctrl+Shift+P or Cmd+Shift+P on macOS) to start a new SSH connection.
-Once connected, you can open your project and use the Source Control panel just like you do locally.
+Launching VS Code from an environment where your SSH agent is running ensures that all child processes, including Git operations initiated from the Source Control panel, inherit the SSH authentication context, thus avoiding permission issues with remote repositories over SSH.

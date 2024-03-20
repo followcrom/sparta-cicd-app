@@ -1,5 +1,7 @@
 # Sparta CI/CD App
 
+![alt text](imgs/cicd-pipeline2.jpg)
+
 ## What is CI/CD?
 
 CI/CD stands for Continuous Integration/Continuous Deployment. It is a set of practices and tools that enable developers to frequently merge code changes into a shared repository, and then deploy the changes to production after automated testing and verification.
@@ -22,6 +24,24 @@ CI/CD can be used in any software development project where you want to automate
 
 ![alt text](imgs/cicd-pipeline.jpg)
 
+## How to Use Jenkins
+
+1. Install Jenkins on your server (optional)
+2. Set up a Jenkins job
+3. Configure the job to build your project
+4. Configure the job to deploy your project
+5. Run the job
+
+![alt text](imgs/cicd-pipeline3.jpg)
+
+## Add SSH Key to Jenkins
+
+1. Generate an SSH key pair on your Jenkins server
+2. Add the public key to your Git repository
+3. Add the private key to Jenkins
+4. Configure your Jenkins job to use the SSH key
+
+
 # How to open VS Code from the terminal
 
 `code .`
@@ -31,4 +51,5 @@ If you're not in the directory of your project, replace . with the path to your 
 Launching VS Code from an environment where your SSH agent is running ensures that all child processes, including Git operations initiated from the Source Control panel, inherit the SSH authentication context, thus avoiding permission issues with remote repositories over SSH.
 
 ## SDLC
+
 

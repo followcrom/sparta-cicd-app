@@ -1,5 +1,7 @@
 # Sparta CI/CD App
 
+Main in the brain?
+
 ## What is CI/CD?
 
 CI/CD stands for Continuous Integration/Continuous Deployment. It is a set of practices and tools that enable developers to frequently merge code changes into a shared repository, and then deploy the changes to production after automated testing and verification.

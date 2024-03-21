@@ -75,6 +75,46 @@ CI/CD can be used in any software development project where you want to automate
 
 **NOTE for Jenkins**: In the "Build Triggers" section, check the option "GitHub hook trigger for GITScm polling".
 
+## Jenkins Merge dev with main
+
+1. **Create a new job** in Jenkins.
+2. **Configure the job**:
+- Discard old builds -> Max to keep 3
+- Add GitHub repository URL (https)
+- restrict where this project can be run -> sparta-ubuntu-node
+- Source code management: Git -> repository URL (ssh)
+- Add private SSH key to Jenkins; should match the public key in your GitHub repository
+- Branches to build: */main. (Because we want to merge the dev branch with the main branch.)
+- Build environment: Provide Node & npm bin/ folder to PATH
+- Build: Execute shell -> `cd app, npm install, npm test`
+- Post-build actions: Git Publisher -> Push only if build succeeds, Merge results -> Branch to push: main, Target remote name: origin. (This is to merge the dev branch with the main branch.)
+
+3. **Save the job configuration.**
+
+
+## Jenkins push to AWS VM
+
+1. **Create a new job** in Jenkins.
+2. **Configure the job**:
+- Discard old builds -> Max to keep 3
+- Add GitHub repository URL (https)
+- Source code management: Git -> repository URL (ssh)
+- Add private SSH key to Jenkins; should match the public key in your GitHub repository
+- Branches to build: */main
+(- Build triggers: GitHub hook trigger for GITScm polling)
+- Build environment: SSH Agent -> Credentials -> Specific credentials -> tech257
+- Build: Execute shell ->
+
+```
+ssh -o "StrictHostKeyChecking=no" ubuntu@<public I.P> <<EOF
+	sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get install nginx -y
+    sudo systemctl restart nginx
+```
+
+3. **Save the job configuration.**
+
 ## How to open VS Code from the terminal
 
 `code .`

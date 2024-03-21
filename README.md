@@ -1,6 +1,6 @@
 # Sparta CI/CD App
 
-Main in the brain? Insane! 🧠
+Main in the brain? 🧠
 
 ## What is CI/CD?
 

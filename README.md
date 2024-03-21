@@ -101,7 +101,7 @@ CI/CD can be used in any software development project where you want to automate
 - Source code management: Git -> repository URL (ssh)
 - Add private SSH key to Jenkins; should match the public key in your GitHub repository
 - Branches to build: */main
-(- Build triggers: GitHub hook trigger for GITScm polling)
+<!-- (- Build triggers: GitHub hook trigger for GITScm polling) -->
 - Build environment: SSH Agent -> Credentials -> Specific credentials -> tech257
 - Build: Execute shell ->
 

@@ -1,4 +1,4 @@
-# Sparta CI/CD App
+# Sparta CI/CD App Deployment
 
 ## What is CI/CD?
 
